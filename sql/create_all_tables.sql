@@ -1,8 +1,8 @@
 -- Удаление таблицы DS.FT_BALANCE_F, если она существует
-DROP TABLE IF EXISTS dsl.ft_balance_f;
+DROP TABLE IF EXISTS ds.ft_balance_f;
 
 -- Создание таблицы DS.FT_BALANCE_F
-CREATE TABLE dsl.ft_balance_f (
+CREATE TABLE ds.ft_balance_f (
     on_date DATE NOT NULL,
     account_rk INTEGER NOT NULL,
     currency_rk INTEGER,
@@ -10,10 +10,10 @@ CREATE TABLE dsl.ft_balance_f (
 );
 
 -- Удаление таблицы DS.FT_POSTING_F, если она существует
-DROP TABLE IF EXISTS dsl.ft_posting_f;
+DROP TABLE IF EXISTS ds.ft_posting_f;
 
 -- Создание таблицы DS.FT_POSTING_F
-CREATE TABLE dsl.ft_posting_f (
+CREATE TABLE ds.ft_posting_f (
     oper_date DATE NOT NULL,
     credit_account_rk INTEGER NOT NULL,
     debet_account_rk INTEGER NOT NULL,
@@ -22,10 +22,10 @@ CREATE TABLE dsl.ft_posting_f (
 );
 
 -- Удаление таблицы DS.MD_ACCOUNT_D, если она существует
-DROP TABLE IF EXISTS dsl.md_account_d;
+DROP TABLE IF EXISTS ds.md_account_d;
 
 -- Создание таблицы DS.MD_ACCOUNT_D
-CREATE TABLE dsl.md_account_d (
+CREATE TABLE ds.md_account_d (
     data_actual_date DATE NOT NULL,
     data_actual_end_date DATE,
     account_rk INTEGER NOT NULL,
@@ -36,10 +36,10 @@ CREATE TABLE dsl.md_account_d (
 );
 
 -- Удаление таблицы DS.MD_CURRENCY_D, если она существует
-DROP TABLE IF EXISTS dsl.md_currency_d;
+DROP TABLE IF EXISTS ds.md_currency_d;
 
 -- Создание таблицы DS.MD_CURRENCY_D
-CREATE TABLE dsl.md_currency_d (
+CREATE TABLE ds.md_currency_d (
     currency_rk INTEGER NOT NULL,
     data_actual_date DATE NOT NULL,
     data_actual_end_date DATE,
@@ -48,10 +48,10 @@ CREATE TABLE dsl.md_currency_d (
 );
 
 -- Удаление таблицы DS.MD_EXCHANGE_RATE_D, если она существует
-DROP TABLE IF EXISTS dsl.md_exchange_rate_d;
+DROP TABLE IF EXISTS ds.md_exchange_rate_d;
 
 -- Создание таблицы DS.MD_EXCHANGE_RATE_D
-CREATE TABLE dsl.md_exchange_rate_d (
+CREATE TABLE ds.md_exchange_rate_d (
     data_actual_date DATE NOT NULL,
     data_actual_end_date DATE,
     currency_rk INTEGER NOT NULL,
@@ -60,10 +60,10 @@ CREATE TABLE dsl.md_exchange_rate_d (
 );
 
 -- Удаление таблицы DS.MD_LEDGER_ACCOUNT_S, если она существует
-DROP TABLE IF EXISTS dsl.md_ledger_account_s;
+DROP TABLE IF EXISTS ds.md_ledger_account_s;
 
 -- Создание таблицы DS.MD_LEDGER_ACCOUNT_S
-CREATE TABLE dsl.md_ledger_account_s (
+CREATE TABLE ds.md_ledger_account_s (
     chapter CHAR(1) NOT NULL,
     chapter_name VARCHAR(16),
     section_number INTEGER,
